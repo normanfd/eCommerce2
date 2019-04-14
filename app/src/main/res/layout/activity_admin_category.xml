@@ -36,25 +36,25 @@
             android:id="@+id/t_shirts"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi" />
+            android:src="@drawable/type_clothes" />
 
         <ImageView
             android:id="@+id/sports_t_shirts"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi" />
+            android:src="@drawable/type_sportclothes" />
 
         <ImageView
             android:id="@+id/female_dresses"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi" />
+            android:src="@drawable/type_dress" />
 
         <ImageView
             android:id="@+id/sweathers"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi" />
+            android:src="@drawable/type_sweater" />
 
     </LinearLayout>
 
@@ -74,28 +74,29 @@
             android:id="@+id/glasses"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi"
+            android:src="@drawable/type_glasses"
             />
 
         <ImageView
             android:id="@+id/purses_bags_wallets"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/type_wallet"
             />
 
         <ImageView
             android:id="@+id/hats_caps"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi"
+            android:src="@drawable/type_caps"
             />
 
         <ImageView
             android:id="@+id/shoes"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi"
+            android:src="@drawable/type_shoes"
             android:layout_marginStart="16dp"
             />
 
@@ -117,28 +118,29 @@
             android:id="@+id/headphones_handfree"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi"
+            android:src="@drawable/type_headphones"
             />
 
         <ImageView
             android:id="@+id/laptop_pc"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/type_laptop"
             />
 
         <ImageView
             android:id="@+id/watches"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi"
+            android:src="@drawable/type_watches"
             />
 
         <ImageView
             android:id="@+id/mobilephones"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/konsumsi"
+            android:src="@drawable/type_phone"
             android:layout_marginStart="16dp"
             />
 
