@@ -37,7 +37,6 @@ public class loginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //variabel pada activity_login.xml
         LoginButton = (Button) findViewById(R.id.login_btn);
         InputPassword = (EditText) findViewById(R.id.login_password_input);
         InputPhoneNumber = (EditText) findViewById(R.id.login_phone_number_input);
@@ -47,7 +46,6 @@ public class loginActivity extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
         Paper.init(this);
 
-        //setiap tombol diklik
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,7 +92,6 @@ public class loginActivity extends AppCompatActivity {
             AllowAccessAccount(phone, password);
         }
     }
-
     private void AllowAccessAccount(final String phone, final String password) {
         if(chkBoxRememberMe.isChecked()){
             Paper.book().write(Prevalent.UserPhoneKey,phone);
@@ -122,8 +119,6 @@ public class loginActivity extends AppCompatActivity {
                                 Prevalent.CurrentOnlineUser = UserData;
                                 startActivity(intent);
                             }
-
-
                         }
                         else{
                             loadingBar.dismiss();

@@ -9,10 +9,9 @@ import android.widget.ImageView;
 
 public class AdminCategoryActivity extends AppCompatActivity {
 
-    private ImageView tShirts, sportTshirts, femaleDresses, sweaters;
-    private ImageView glasses, hatsCaps, purseBagsWallets, shoes;
-
-    private ImageView headphone, laptops, watches, mobilephone;
+    private ImageView tShirts, sportTshirts, femaleDresses, sweaters,
+                      glasses, hatsCaps, purseBagsWallets, shoes,
+                      headphone, laptops, watches, mobilephone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +35,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
+                //passing data dengan intent
                 intent.putExtra("category", "tsShIrts");
                 startActivity(intent);
             }

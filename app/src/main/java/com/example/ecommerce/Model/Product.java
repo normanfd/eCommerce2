@@ -34,12 +34,12 @@ public class Product {
         this.date = date;
     }
 
-    public String getDecription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDecription(String decription) {
-        this.description = decription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getImage() {

@@ -40,7 +40,6 @@ public class HomeActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +83,8 @@ public class HomeActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
+        //nantinya bakal ditampilin ke recycleview
+        //import dari firebaseUI dengan query tertentu
         FirebaseRecyclerOptions<Product> options =
                 new FirebaseRecyclerOptions.Builder<Product>()
                 .setQuery(ProductRef, Product.class)
@@ -93,10 +94,9 @@ public class HomeActivity extends AppCompatActivity
                     @Override
                     protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Product model) {
                         holder.txtProductName.setText(model.getProductname());
-                        holder.txtProductDescription.setText(model.getDecription());
+                        holder.txtProductDescription.setText(model.getDescription());
                         holder.txtproductPrice.setText("Price : " + model.getPrice() + " rupiah");
                         Picasso.get().load(model.getImage()).into(holder.imageView);
-
                     }
 
                     @NonNull

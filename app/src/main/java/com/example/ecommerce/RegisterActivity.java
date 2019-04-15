@@ -77,7 +77,9 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(!(dataSnapshot.child("Users").child(phone).exists())){
+                    //Hashmap<key,value>
                     HashMap<String, Object> UserDataMap = new HashMap<>();
+                    //fill value to hashmap
                     UserDataMap.put("phone",phone);
                     UserDataMap.put("password",password);
                     UserDataMap.put("name",name);
