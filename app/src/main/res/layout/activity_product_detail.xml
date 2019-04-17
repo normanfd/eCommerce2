@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:scaleType="centerCrop"
+        android:layout_margin="15dp"
         />
     <TextView
         android:id="@+id/product_name_detail"
@@ -55,16 +56,15 @@
         android:layout_below="@+id/product_price_detail"
         android:layout_marginTop="10dp"
         />
-    
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_product_to_cart_btn"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/pd_add_to_cart_btn"
         android:layout_height="wrap_content"
-        android:elevation="6dp"
-        android:backgroundTint="@android:color/white"
-        android:src="@drawable/ic_shopping_cart"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
         android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:text="Add to Cart"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
         />
 </RelativeLayout>
