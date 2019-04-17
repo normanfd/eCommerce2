@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
         if(UserPhoneKey != "" && UserPasswordKey != ""){
             if(!TextUtils.isEmpty(UserPhoneKey) && !TextUtils.isEmpty(UserPasswordKey)){
                 AllowAccess(UserPhoneKey,UserPasswordKey);
-                loadingBar.setTitle("Already Logged in");
-                loadingBar.setMessage("please wait...");
-                loadingBar.setCanceledOnTouchOutside(false);
-                loadingBar.show();
+//                loadingBar.setTitle("Already Logged in");
+//                loadingBar.setMessage("please wait...");
+//                loadingBar.setCanceledOnTouchOutside(false);
+//                loadingBar.show();
             }
         }
     }
@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
                     Users UserData = dataSnapshot.child("Users").child(phone).getValue(Users.class);
                     if(UserData.getPhone().equals(phone)){
                         if(UserData.getPassword().equals(password)){
-                            Toast.makeText(MainActivity.this, "Please wait, you are already logged in..", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
+//                            Toast.makeText(MainActivity.this, "Please wait, you are already logged in..", Toast.LENGTH_SHORT).show();
+//                            loadingBar.dismiss();
                             Intent intent = new Intent(MainActivity.this,HomeActivity.class);
                             Prevalent.CurrentOnlineUser = UserData;
                             startActivity(intent);

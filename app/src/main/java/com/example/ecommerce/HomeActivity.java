@@ -96,7 +96,7 @@ public class HomeActivity extends AppCompatActivity
                     protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Product model) {
                         holder.txtProductName.setText(model.getProductname());
                         holder.txtProductDescription.setText(model.getDescription());
-                        holder.txtproductPrice.setText("Price : " + model.getPrice() + " rupiah");
+                        holder.txtproductPrice.setText("Price : Rp. " + model.getPrice() + " rupiah");
                         Picasso.get().load(model.getImage()).into(holder.imageView);
                     }
 

@@ -90,7 +90,7 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void updateOnlyUserInfo() {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users");
         HashMap<String, Object> userMap = new HashMap<>();
         userMap.put("name", fullNameEditText.getText().toString());
         userMap.put("address", addressEditText.getText().toString());
@@ -165,7 +165,8 @@ public class SettingActivity extends AppCompatActivity {
 
                          progressDialog.dismiss();
 
-                         startActivity(new Intent(SettingActivity.this, HomeActivity.class));
+                        Intent intent = new Intent(SettingActivity.this,MainActivity.class);
+                        startActivity(intent);
                          Toast.makeText(SettingActivity.this, "Profile info updated", Toast.LENGTH_SHORT).show();
                          finish();
                     }else {
