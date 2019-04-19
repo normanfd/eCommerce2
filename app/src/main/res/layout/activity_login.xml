@@ -94,20 +94,7 @@
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/not_admin_panel_link"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_btn"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="236dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="22dp"
-        android:text="I'm not an Admin?"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:visibility="invisible" />
+
     <TextView
         android:id="@+id/admin_panel_link"
         android:layout_width="wrap_content"
