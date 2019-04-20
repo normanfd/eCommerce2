@@ -1,7 +1,9 @@
 package com.example.ecommerce;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -58,6 +60,29 @@ public class adminNewOrderActivity extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         });
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                CharSequence options[] = new CharSequence[]{
+                                        "Yes",
+                                        "No"
+                                };
+                                AlertDialog.Builder builder = new AlertDialog.Builder(adminNewOrderActivity.this);
+                                builder.setTitle("Have you shipped this order products?");
+                                builder.setItems(options, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        if(i == 0){
+                                            String uID = getRef(position).getKey();
+                                            removeOrder(uID);
+                                        }   else{
+                                            finish();
+                                        }
+                                    }
+                                });
+                                builder.show();
+                            }
+                        });
                     }
 
                     @NonNull
@@ -84,5 +109,8 @@ public class adminNewOrderActivity extends AppCompatActivity {
             showOrdersBtn = itemView.findViewById(R.id.show_all_products_btn);
 
         }
+    }
+    private void removeOrder(String uID) {
+        ordersRef.child(uID).removeValue();
     }
 }
