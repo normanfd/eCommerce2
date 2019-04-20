@@ -108,7 +108,7 @@ public class loginActivity extends AppCompatActivity {
                     if(UserData.getPhone().equals(phone)){
                         if(UserData.getPassword().equals(password)){
                             if(ParentDbName.equals("Admins")){
-                                Toast.makeText(loginActivity.this, "Welcome Admin, you are Login succesfully..", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(loginActivity.this, "Welcome Admin, you are Login succesfully..", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
                                 Intent intent = new Intent(loginActivity.this,AdminCategoryActivity.class);
                                 startActivity(intent);

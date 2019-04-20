@@ -1,5 +1,6 @@
 package com.example.ecommerce;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,12 +43,21 @@ public class adminNewOrderActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<AdminOrders,AdminOrdersViewholder> adapter =
                 new FirebaseRecyclerAdapter<AdminOrders, AdminOrdersViewholder>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull AdminOrdersViewholder holder, int position, @NonNull AdminOrders model) {
+                    protected void onBindViewHolder(@NonNull AdminOrdersViewholder holder, final int position, @NonNull final AdminOrders model) {
                         holder.userName.setText("Name = " + model.getName());
                         holder.userPhoneNumber.setText("Phone = " + model.getPhone());
                         holder.userTotalAmount.setText("Total Amount= " + model.getTotalAmount());
                         holder.userDateTime.setText("Order at = " + model.getDate() + " " + model.getTime());
                         holder.userShippingAddress.setText("Shipping address = " + model.getAddress() + " " + model.getCity());
+                        holder.showOrdersBtn.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String uID = getRef(position).getKey();
+                                Intent intent = new Intent(adminNewOrderActivity.this, AdminUserProductActivity.class);
+                                intent.putExtra("uid", uID);
+                                startActivity(intent);
+                            }
+                        });
                     }
 
                     @NonNull
