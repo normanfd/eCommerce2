@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relgeneral"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,13 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="10dp"
         android:text="Add New Product"
         android:textAlignment="center"
         android:textSize="26sp"
-        android:textStyle="bold"
-        />
-
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:id="@+id/linear1_category_layout"
@@ -27,7 +26,7 @@
         android:layout_below="@+id/slogan_category"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:orientation="horizontal">
@@ -55,10 +54,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/type_sweater" />
-
     </LinearLayout>
-
-
 
     <LinearLayout
         android:id="@+id/linear2_category_layout"
@@ -68,41 +64,34 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:layout_marginTop="45dp">
+        android:layout_marginTop="10dp">
 
         <ImageView
             android:id="@+id/glasses"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/type_glasses"
-            />
+            android:src="@drawable/type_glasses"/>
 
         <ImageView
             android:id="@+id/purses_bags_wallets"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginRight="13dp"
-            android:src="@drawable/type_wallet"
-            />
+            android:src="@drawable/type_wallet"/>
 
         <ImageView
             android:id="@+id/hats_caps"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/type_caps"
-            />
+            android:src="@drawable/type_caps"/>
 
         <ImageView
             android:id="@+id/shoes"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/type_shoes"
-            android:layout_marginStart="16dp"
-            />
-
+            android:layout_marginStart="16dp"/>
     </LinearLayout>
-
-
 
     <LinearLayout
         android:id="@+id/linear3_category_layout"
@@ -112,40 +101,52 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:layout_marginTop="45dp">
-
+        android:layout_marginTop="10dp">
         <ImageView
             android:id="@+id/headphones_handfree"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/type_headphones"
-            />
-
+            android:src="@drawable/type_headphones"/>
         <ImageView
             android:id="@+id/laptop_pc"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginRight="13dp"
-            android:src="@drawable/type_laptop"
-            />
-
+            android:src="@drawable/type_laptop"/>
         <ImageView
             android:id="@+id/watches"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/type_watches"
-            />
-
+            android:src="@drawable/type_watches"/>
         <ImageView
             android:id="@+id/mobilephones"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/type_phone"
-            android:layout_marginStart="16dp"
-            />
-
+            android:layout_marginStart="16dp"/>
     </LinearLayout>
-
-
-
+    <Button
+        android:id="@+id/admin_logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Logout"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/admin_check_order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/admin_logout_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Check new Orders"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
 </RelativeLayout>
